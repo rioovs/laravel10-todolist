@@ -3,9 +3,9 @@
 @section('title', 'Laravel 10 Task List App')
 @section('content')
     {{-- @if (count($tasks)) --}}
-    @forelse ($tasks as $tasks)
+    @forelse ($tasks as $task)
         <div>
-            <a href="{{ route('tasks.show', ['id' => $tasks->id]) }}"> {{ $tasks->title }} </a>
+            <a href="{{ route('tasks.show', ['task' => $task->id]) }}"> {{ $task->title }} </a>
         </div>
     @empty
         <div>there are not tasks !</div>
